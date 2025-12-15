@@ -1,18 +1,24 @@
 ---
-const { text, img } = Astro.props;
+const { text, img, href } = Astro.props;
 ---
-
-<article class="img-text">
-    <h2>{text}</h2>
-    <img src={img} />
+<article>
+<a href={href} class="img-text">
+  <span class="tag">{text}</span>
+  <img src={img} alt="" />
+</a>
 </article>
 
-
 <style>
+
+article {
+  margin-bottom: 1.5rem;
+}
+
 .img-text {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+    display: block;
 }
 
 .img-text img {
@@ -22,7 +28,7 @@ const { text, img } = Astro.props;
   display: block;
 }
 
-.img-text h2 {
+.img-text .tag {
   position: absolute;
   inset: 0;
   display: flex;

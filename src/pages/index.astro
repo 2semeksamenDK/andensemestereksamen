@@ -1,0 +1,45 @@
+---
+import PageLayout from "../layout/PageLayout.astro";
+import TekstboksCard from "../components/TekstboksCard.astro";
+import BilledeKnapCard from "../components/BilledeKnapCard.astro";
+
+// const url = "https://ymlnlcumkrorbgateorr.supabase.co/rest/v1/soundwheelwork";
+// const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbG5sY3Vta3JvcmJnYXRlb3JyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQxMzc5MDgsImV4cCI6MjA3OTcxMzkwOH0.haBR9CabQwtAdAJKmDvXc3GN_AIuiLLBKq0X26TjUR4";
+
+// const options = {
+//   headers: {
+//     apikey: key,
+//   },
+// };
+
+// const supaRequest = await fetch(url, options);
+// const supaData = await supaRequest.json();
+
+// console.log("supaData", supaData);
+---
+
+<PageLayout title="Forside">
+<section class="grid_1-1-1">
+    <section>
+        <TekstboksCard text1="Større bevidsthed" text2="Få indsigt i dit forbrug og se, hvordan dine valg gør en reel forskel for både dig og planeten."/>
+    </section>
+    <section>
+        <TekstboksCard text1="Optjen point" text2="Bliv belønnet for din omtanke. Hver bæredygtig handling tæller og giver point til oplevelser og fællesskab."/>
+    </section>
+    <section>
+        <TekstboksCard text1="Fællesskab og bevægelse" text2="Bliv en del af fællesskaber, der inspirerer til bevægelse, samvær og en mere bæredygtig livsstil."/>
+    </section>
+</section>
+
+<section class="grid_1-1">
+    <BilledeKnapCard text="DANKORT IMPACT RUNNING CLUB" img=""/>
+    <BilledeKnapCard text="LANGBORDSMIDDAG" img=""/>
+    <BilledeKnapCard text="DANKORT IMPACT X BEAT RIDERS" img=""/>
+    <BilledeKnapCard text="MORGENDYP" img=""/>
+</section>
+
+
+
+
+
+</PageLayout>

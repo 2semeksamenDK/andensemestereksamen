@@ -2,6 +2,7 @@
 import PageLayout from "../layout/PageLayout.astro";
 import TekstboksCard from "../components/TekstboksCard.astro";
 import BilledeKnapCard from "../components/BilledeKnapCard.astro";
+import Button from "../components/Button.astro"
 
 // const url = "https://ymlnlcumkrorbgateorr.supabase.co/rest/v1/soundwheelwork";
 // const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbG5sY3Vta3JvcmJnYXRlb3JyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQxMzc5MDgsImV4cCI6MjA3OTcxMzkwOH0.haBR9CabQwtAdAJKmDvXc3GN_AIuiLLBKq0X26TjUR4";
@@ -19,27 +20,24 @@ import BilledeKnapCard from "../components/BilledeKnapCard.astro";
 ---
 
 <PageLayout title="Forside">
+
+    <Button text="TILMELD DIG" href="/content/placeholder" />
+
 <section class="grid_1-1-1">
-    <section>
-        <TekstboksCard text1="Større bevidsthed" text2="Få indsigt i dit forbrug og se, hvordan dine valg gør en reel forskel for både dig og planeten."/>
-    </section>
-    <section>
-        <TekstboksCard text1="Optjen point" text2="Bliv belønnet for din omtanke. Hver bæredygtig handling tæller og giver point til oplevelser og fællesskab."/>
-    </section>
-    <section>
-        <TekstboksCard text1="Fællesskab og bevægelse" text2="Bliv en del af fællesskaber, der inspirerer til bevægelse, samvær og en mere bæredygtig livsstil."/>
-    </section>
+    <TekstboksCard title="Større bevidsthed" text1="Få indsigt i dit forbrug og se, hvordan dine valg gør en reel forskel for både dig og planeten."/>
+    <TekstboksCard title="Optjen point" text1="Bliv belønnet for din omtanke. Hver bæredygtig handling tæller og giver point til oplevelser og fællesskab."/>
+    <TekstboksCard title="Fællesskab og bevægelse" text1="Bliv en del af fællesskaber, der inspirerer til bevægelse, samvær og en mere bæredygtig livsstil."/>
 </section>
 
 <section class="grid_1-1">
-    <BilledeKnapCard text="DANKORT IMPACT RUNNING CLUB" img=""/>
-    <BilledeKnapCard text="LANGBORDSMIDDAG" img=""/>
-    <BilledeKnapCard text="DANKORT IMPACT X BEAT RIDERS" img=""/>
-    <BilledeKnapCard text="MORGENDYP" img=""/>
+    <BilledeKnapCard text="DANKORT IMPACT RUNNING CLUB" img="imgs/knapforsideløbeklub.svg"/>
+    <BilledeKnapCard text="LANGBORDSMIDDAG" img="imgs/knapforsidelangbord.svg"/>
+    <BilledeKnapCard text="DANKORT IMPACT X BEAT RIDERS" img="imgs/knapforsidebeat.svg"/>
+    <BilledeKnapCard text="MORGENDYP" img="imgs/knapforsidesvøm.svg"/>
 </section>
 
+    <Button text="SE FLERE" href="/content/placeholder" />
 
-
-
+    <TekstboksCard title="Sammen gør vi ansvarlige valg til det nye normale" text1="Tjen point, del oplevelser og skab impact - ét valg ad gangen." text2="Dankort IMPACT gør bæredygtighed til en del af hverdagen ved at belønne omtanke og skabe fællesskaber omkring ansvarlige valg." text3="Her handler det ikke om at gøre alt perfekt - men om at gøre lidt bedre, sammen."/>
 
 </PageLayout>

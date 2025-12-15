@@ -15,11 +15,25 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="noindex, nofollow" />
+     <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Bytesized&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Bytesized&family=Carme&display=swap"
+        rel="stylesheet">
     <title>{title}</title>
   </head>
+
+
   <body>
     <Header/>
+    <main>
+    <section class="baggrundsfarve">
     <slot />
+    </section>
+    </main>
     <Footer />
   </body>
 </html>

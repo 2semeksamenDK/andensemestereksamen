@@ -1,5 +1,5 @@
 <footer>
-    <section>
+    <section class="grid">
         <a href="https://www.instagram.com/dankort.danmark/">INSTAGRAM</a>
         <a href="https://www.facebook.com/dankort.danmark/?locale=da_DK">FACEBOOK</a>
         <a href="https://www.linkedin.com/showcase/dankort/">LINKEDIN</a>
@@ -10,29 +10,46 @@
 
 <style>
 
+
 footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
     margin-bottom: 3rem;
-}
-
-a {
-    color: black;
-    font-family: "Carme", sans-serif;
+    margin-top: 4rem;
 }
 
 img {
-  max-width: 180px;   justér efter smag
+  max-width: 50px;
   width: 100%;
   height: auto;
 
 }
 
+a {
+    color: black;
+    font-family: "Carme", sans-serif;
+    font-size: smaller;
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
 
+@media (min-width: 800px) {
+
+.grid {
+    gap: 4rem;
+}
+}
 
 </style>

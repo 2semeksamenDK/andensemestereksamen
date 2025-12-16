@@ -1,0 +1,28 @@
+---
+const { title1, title2, title3, title4, text1, text2, text3, text4, subtitle1, subtitle2, subtitle3, subtitle4 } = Astro.props;
+---
+
+<article class="grid-1_1_1_1">
+  <h3>{title1}</h3>
+  <h3>{title2}</h3>
+  <h3>{title3}</h3>
+  <h3>{title4}</h3>
+
+  <p>{text1}</p>
+  <p>{text2}</p>
+  <p>{text3}</p>
+  <p>{text4}</p>
+
+  <p>{subtitle1}</p>
+  <p>{subtitle2}</p>
+  <p>{subtitle3}</p>
+  <p>{subtitle4}</p>
+</article>
+
+<style>
+  .grid-1_1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+</style>
+<script></script>

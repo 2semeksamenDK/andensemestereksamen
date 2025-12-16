@@ -3,6 +3,7 @@ import PageLayout from "../layout/PageLayout.astro";
 import TekstboksCard from "../components/TekstboksCard.astro";
 import BilledeKnapCard from "../components/BilledeKnapCard.astro";
 import Button from "../components/Button.astro"
+import Hero from "../components/Hero.astro"
 
 // const url = "https://ymlnlcumkrorbgateorr.supabase.co/rest/v1/soundwheelwork";
 // const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltbG5sY3Vta3JvcmJnYXRlb3JyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQxMzc5MDgsImV4cCI6MjA3OTcxMzkwOH0.haBR9CabQwtAdAJKmDvXc3GN_AIuiLLBKq0X26TjUR4";
@@ -19,15 +20,18 @@ import Button from "../components/Button.astro"
 // console.log("supaData", supaData);
 ---
 
-<PageLayout title="Forside">
 
-    <Button text="TILMELD DIG" href="/content/placeholder" />
+
+<PageLayout title="Forside">
+<Hero slot="hero" img="/imgs/herobillede.webp" logo="/imgs/logo_hero.svg"/>
 
 <section class="grid_1-1-1">
     <TekstboksCard title="Større bevidsthed" text1="Få indsigt i dit forbrug og se, hvordan dine valg gør en reel forskel for både dig og planeten."/>
     <TekstboksCard title="Optjen point" text1="Bliv belønnet for din omtanke. Hver bæredygtig handling tæller og giver point til oplevelser og fællesskab."/>
     <TekstboksCard title="Fællesskab og bevægelse" text1="Bliv en del af fællesskaber, der inspirerer til bevægelse, samvær og en mere bæredygtig livsstil."/>
 </section>
+
+<Button text="TILMELD DIG" href="/content/placeholder" />
 
 <section class="grid_1-1">
     <BilledeKnapCard text="DANKORT IMPACT RUNNING CLUB" img="imgs/knapforsideløbeklub.svg" href="/"/>

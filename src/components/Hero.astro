@@ -1,0 +1,54 @@
+---
+const { img, logo } = Astro.props;
+---
+
+<article class="hero" >
+    <img class="img_hero" src={img} alt=""/>
+    <div class="hero_overlay"></div>
+    <img class="logo_hero" src={logo} alt=""/>
+</article>
+
+<style>
+.hero {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.img_hero {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 45%;
+  
+}
+
+.hero_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 27, 149, 0.25);
+  z-index: 1;
+}
+
+.logo_hero {
+    position: absolute;
+  inset: 0;
+  margin: auto;      
+  width: 350px;      
+  height: auto;
+  z-index: 2;
+}
+
+@media (min-width: 800px) {
+
+.img_hero {
+    height: 480px;
+    
+  }
+
+.logo_hero {
+    width: 1000px;
+}
+}
+</style>

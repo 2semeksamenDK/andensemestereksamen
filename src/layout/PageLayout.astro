@@ -3,8 +3,6 @@ import "../styles/style.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-
-
 const { title } = Astro.props;
 ---
 
@@ -30,6 +28,7 @@ const { title } = Astro.props;
   <body>
     <Header/>
     <main>
+     <slot name="hero"/>
     <section class="baggrundsfarve">
     <slot />
     </section>

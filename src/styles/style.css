@@ -22,10 +22,10 @@ p {
 
 .baggrundsfarve {
   background-color: rgba(235, 226, 216, 0.37);
-  padding: 10px 50px;
+  padding: 30px 50px;
   border-radius: 12px;
   width: 95%;
-  margin: 50px auto;
+  margin: 20px auto;
   text-align: center;
 }
 
@@ -40,11 +40,10 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    margin-top: 70px;
   }
 
   .baggrundsfarve {
     padding: 50px 150px;
-    margin: 40px auto;
+    margin: 20px auto;
   }
 }

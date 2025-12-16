@@ -2,17 +2,32 @@
 import PageLayout from "../layout/PageLayout.astro";
 import AftrykCard from "../components/AftrykCard.astro";
 import LevelUpCard from "../components/LevelUpCard.astro";
+import BobbelCard from "../components/BobbelCard.astro";
+import BobbelTekstCard from "../components/BobbelTekstCard.astro";
+import ProfilTekstCard from "../components/ProfilTekstCard.astro";
 ---
 
 <PageLayout>
+  <section class="bobbelgrid">
+    <BobbelTekstCard title="Sidste 30 dage" subtitle="220" text="kg CO₂" />
+    <BobbelCard img="/imgs/Group 36.svg" />
+  </section>
+
+  <section class="test">
+    <ProfilTekstCard title="Dankort IMPACT giver dig et hurtigt overblik over, hvordan dine daglige valg påvirker klima og økonomi." tekst="Du kan se, hvordan dit forbrug fordeler sig på kategorier som transport, mad, shopping og hjem - uden løftede pegefingre, kun klar indsigt. Små ændringer gør en stor forskel. Her kan du følge dine vaner, se dine fremskridt og finde motivation i det fællesskab, du er en del af." />
+  </section>
+
   <h1 class="levelupoverskrift">Sådan fordeles dit aftryk</h1>
+
   <section class="co2_grid">
     <AftrykCard title="Transport" subtitle="Kg CO2" text="100" />
     <AftrykCard title="Shopping" subtitle="Kg CO2" text="30" />
     <AftrykCard title="Hjem" subtitle="Kg CO2" text="66" />
     <AftrykCard title="Mad" subtitle="Kg CO2" text="10" />
   </section>
+
   <h1 class="levelupoverskrift">Level up dine vaner</h1>
+
   <section class="levelup">
     <LevelUpCard img="/public/imgs/Exterior.svg" title="Daily Reset Challenge" text="Kan du holde en dag helt uden unødvendigt forbrug? En zero-spend day = point direkte på kontoen." />
     <LevelUpCard img="/public/imgs/Food.svg" title="Move More Mission" text="Prøv én dag med lokale køb eller plantebaserede måltider. Det sparer både klima – og giver dig lette point." />

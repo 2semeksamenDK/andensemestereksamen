@@ -1,0 +1,33 @@
+---
+const { title, subtitle, text } = Astro.props;
+---
+
+<article>
+  <h1>{title}</h1>
+  <h2>{subtitle}</h2>
+  <p>{text}</p>
+</article>
+
+<style>
+  h1 {
+    font-size: 40px;
+    line-height: 0.85;
+  }
+
+  h2 {
+    font-size: 200px;
+    font-weight: 300px;
+    line-height: 0.85;
+  }
+
+  p {
+    background: black;
+    color: white;
+    padding: 20px 70px 30px;
+    border-radius: 999px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: inline-block;
+    letter-spacing: 2px;
+  }
+</style>

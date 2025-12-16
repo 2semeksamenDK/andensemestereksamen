@@ -69,4 +69,22 @@ p {
     text-align: start;
     margin: 20px;
   }
+
+  .bobbelgrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  .test {
+    display: grid;
+    justify-content: end;
+  }
+
+  /* .gridflexprofil {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 4rem;
+    width: 100%;
+  } */
 }

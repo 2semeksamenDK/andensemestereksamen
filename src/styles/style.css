@@ -18,6 +18,12 @@ p {
   line-height: 30px;
 }
 
+.co2_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
 /******************/
 
 .baggrundsfarve {
@@ -46,5 +52,21 @@ p {
   .baggrundsfarve {
     padding: 50px 150px;
     margin: 40px auto;
+  }
+
+  .co2_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .levelup {
+    text-align: left;
+    padding-top: 20px;
+  }
+
+  .levelupoverskrift {
+    text-align: start;
+    margin: 20px;
   }
 }

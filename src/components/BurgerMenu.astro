@@ -1,12 +1,12 @@
 ---
 
 ---
+
 <nav>
   <ul class="menu">
     <li><a href="/">FORSIDE</a></li>
     <li><a href="/oversigt">FÆLLESSKAB OG BEVÆGELSE</a></li>
     <li><a href="/profil">PROFIL</a></li>
-
   </ul>
 
   <div class="burger">
@@ -16,109 +16,102 @@
   </div>
 </nav>
 
-
-
 <script>
+  // Vælg burger-ikonet, navigationen og menuen
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
 
-// Vælg burger-ikonet, navigationen og menuen
-const burger = document.querySelector(".burger");
-const nav = document.querySelector("nav");
-const menu = document.querySelector(".menu");
+  // Tilføj en event listener, der reagerer på klik på burger-ikonet
+  burger.addEventListener("click", burgerClick);
 
+  // Funktion, der bliver kaldt når burger-ikonet bliver klikket
+  function burgerClick() {
+    // Toggler (tilføjer eller fjerner) 'active' klassen på burger-ikonet
+    burger.classList.toggle("active");
+    // Toggler (tilføjer eller fjerner) 'active' klassen på navigationen (menuen)
+    nav.classList.toggle("active");
+  }
 
-// Tilføj en event listener, der reagerer på klik på burger-ikonet
-burger.addEventListener("click", burgerClick);
+  // Tilføj en event listener, der reagerer på klik på menuen
+  menu.addEventListener("click", menuClick);
 
-// Funktion, der bliver kaldt når burger-ikonet bliver klikket
-function burgerClick() {
-  // Toggler (tilføjer eller fjerner) 'active' klassen på burger-ikonet
-  burger.classList.toggle("active");
-  // Toggler (tilføjer eller fjerner) 'active' klassen på navigationen (menuen)
-  nav.classList.toggle("active");
-}
-
-// Tilføj en event listener, der reagerer på klik på menuen
-menu.addEventListener("click", menuClick);
-
-// Funktion, der bliver kaldt når menuen bliver klikket
-function menuClick() {
-  // Fjerner 'active' klassen fra burger-ikonet (gør det til et normalt ikon)
-  burger.classList.remove("active");
-  // Fjerner 'active' klassen fra navigationen (lukker menuen)
-  nav.classList.remove("active");
-}
-
+  // Funktion, der bliver kaldt når menuen bliver klikket
+  function menuClick() {
+    // Fjerner 'active' klassen fra burger-ikonet (gør det til et normalt ikon)
+    burger.classList.remove("active");
+    // Fjerner 'active' klassen fra navigationen (lukker menuen)
+    nav.classList.remove("active");
+  }
 </script>
 
 <style>
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
 
-.burger {
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.burger .line {
-  width: 100%;
-  height: 2px;
-  background-color: #000000;
-  margin-bottom: 5px;
-  transition: 0.2s linear;
-}
-.burger {
-  display: none;
-}
-
-@media screen and (max-width: 800px) {
-  .menu {
-    display: none;
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
   }
   .burger {
-    display: block;
-  }
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
+    display: none;
   }
 
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-    transition: 0.15s linear;
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: block;
+      background-color: #ffffff;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+      font-size: 24px;
+    }
   }
 
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
+  main {
+    max-width: 1200px;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
-  nav.active .menu {
-    display: block;
-    background-color: #ffffff;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+  .hide_mobile {
+    display: none;
   }
-
-  nav.active .menu li {
-    margin: 10px 20px;
-  }
-
-  nav.active .menu a {
-    font-size: 24px;
-  }
-}
-
-main {
-  max-width: 1200px;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.hide_mobile {
-  display: none;
-}
-
 </style>

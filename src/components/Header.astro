@@ -1,16 +1,13 @@
 ---
-import { navLinks } from "../data/navLinks";
 import Navigation from "./Navigation.astro";
 import BurgerMenu from "./BurgerMenu.astro";
 
 ---
-
 <header>
   <img src="imgs/logo.svg" alt="logo" />
-  <Navigation links={navLinks} />
-  <BurgerMenu links={navLinks} />
+  <Navigation />
+  <BurgerMenu />
 </header>
-
 
 <style>
   header {
@@ -40,6 +37,5 @@ header img {
     display: none;
   }
 }
-
 
 </style>

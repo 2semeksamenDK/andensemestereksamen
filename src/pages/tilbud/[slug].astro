@@ -1,8 +1,8 @@
 ---
-import OversigtCard from "../components/OversigtCard.astro";
-import OverskriftCard from "../components/OverskriftCard.astro";
-import PageLayout from "../layout/PageLayout.astro";
+import type { GetStaticPaths } from "astro";
+import PageLayout from "../../layout/PageLayout.astro";
 
+export async function getStaticPaths() {
 
 const url = "https://zcoyexxpigipyagyxcfr.supabase.co/rest/v1/tilbud";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpjb3lleHhwaWdpcHlhZ3l4Y2ZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5MzcwMDUsImV4cCI6MjA4MTUxMzAwNX0.E7F0l3S6iLF5y0SDOwx6ZNnTdPxAG4DBZDIWIlbd2Dk";
@@ -18,14 +18,22 @@ const supaData = await supaRequest.json();
 
 console.log("supaData", supaData);
 
+    return supaData.map((data) => {
+        return {
+            params: { slug: data.slug},
+            props: { data },
+        };
+    });
+}
+
+const { data } = Astro.props;
 
 ---
 
-<PageLayout>
-  <OverskriftCard slot="OverskriftCard" title="FÆLLESSKAB OG BEVÆGELSE" />
+<PageLayout title=`${data.slug}`>
+    <h1>{data.title}</h1>
+    <p> {data.text1}</p>
+    <h2>{data.subtitle}</h2>
+    <p> {data.text2}</p>
 
-  <section>
-    <OversigtCard />
-  </section>
 </PageLayout>
-

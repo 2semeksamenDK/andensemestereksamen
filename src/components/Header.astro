@@ -4,8 +4,8 @@ import BurgerMenu from "./BurgerMenu.astro";
 
 ---
 <header>
-  <img src="imgs/logo.svg" alt="logo" />
-  <Navigation />
+  <a href="/"><img src="imgs/logo.svg" alt="logo" /></a>
+  <!-- <Navigation /> -->
   <BurgerMenu />
 </header>
 
@@ -22,20 +22,7 @@ import BurgerMenu from "./BurgerMenu.astro";
 header img {
   width: auto;
   height: auto;
-}
 
-/* Desktop */
-@media (min-width: 800px) {
-  .burger {
-    display: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 799px) {
-  nav.desktop {
-    display: none;
-  }
 }
 
 </style>

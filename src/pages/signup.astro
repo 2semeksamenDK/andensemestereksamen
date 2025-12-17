@@ -1,11 +1,17 @@
 ---
 import OverskriftCard from "../components/OverskriftCard.astro";
 import SignUpCard from "../components/SignUpCard.astro";
+import TextSignUpCard from "../components/TextSignUpCard.astro";
 import PageLayout from "../layout/PageLayout.astro";
 ---
 
 <PageLayout>
-  <OverskriftCard slot="OverskriftCard" title="TILMELD DIG HER" />
+  <OverskriftCard slot="OverskriftCard" title="BLIV EN DEL AF FÆLLESSKABET" />
+
+  <section>
+    <TextSignUpCard title="VELKOMMEN TIL DANKORT - IMPACT" text="Tilmeld dig nemt med dit Dankort og begynd at optjene point for dine bæredygtige valg."/>
+  </section>
+
   <section class="signup-box">
     <SignUpCard text="Navn:" />
     <SignUpCard text="Efternavn:" />

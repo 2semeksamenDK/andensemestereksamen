@@ -1,10 +1,11 @@
 ---
+import OverskriftCard from "../components/OverskriftCard.astro";
 import SignUpCard from "../components/SignUpCard.astro";
 import PageLayout from "../layout/PageLayout.astro";
 ---
 
 <PageLayout>
-  <h1>TILMELD DIG HER</h1>
+  <OverskriftCard slot="OverskriftCard" title="TILMELD DIG HER" />
   <section class="signup-box">
     <SignUpCard text="Navn:" />
     <SignUpCard text="Efternavn:" />

@@ -7,10 +7,16 @@
 
 /****** FONTE ******/
 h1,
-h2,
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 100;
+}
 a {
   font-family: "Amaranth", sans-serif;
   font-weight: 100;
+  color: #001e96;
+  text-decoration: none;
+  list-style: none;
 }
 
 p {
@@ -73,6 +79,12 @@ input {
 
 .submit-btn:hover {
   background: #002fcc;
+}
+
+ul.menu {
+  list-style: none;
+  padding: 30px;
+  justify-content: left;
 }
 
 @media (min-width: 800px) {
@@ -167,5 +179,17 @@ input {
 
   .submit-btn:hover {
     background: #002fcc;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 30px;
+    color: #001e96;
+    text-decoration: none;
+  }
+  ul.menu {
+    list-style: none;
   }
 }

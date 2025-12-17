@@ -1,8 +1,8 @@
 ---
 import Navigation from "./Navigation.astro";
 import BurgerMenu from "./BurgerMenu.astro";
-
 ---
+
 <header>
   <a href="/"><img src="imgs/logo.svg" alt="logo" /></a>
   <!-- <Navigation /> -->
@@ -11,18 +11,18 @@ import BurgerMenu from "./BurgerMenu.astro";
 
 <style>
   header {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  background: white;
-  align-items: flex-end; 
-  margin-left: 2rem;
-}
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    align-items: flex-end;
+    margin-left: 2rem;
+    list-style: none;
+    margin-bottom: 20px;
+  }
 
-header img {
-  width: auto;
-  height: auto;
-
-}
-
+  header img {
+    width: 80%;
+    height: auto;
+  }
 </style>

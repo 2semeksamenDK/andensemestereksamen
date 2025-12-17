@@ -80,10 +80,43 @@ p {
     justify-content: end;
   }
 
-  /* .gridflexprofil {
-    display: flex;
-    align-items: flex-end;
-    padding-left: 4rem;
-    width: 100%;
-  } */
+  .signup-box {
+    background: #f7f3ef;
+    padding: 30px;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 14px;
+  }
+
+  label {
+    width: 140px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #001e96;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+  }
+  .submit-knap {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 12px 30px;
+    background: #001e96;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .submit-btn:hover {
+    background: #002fcc;
+  }
 }

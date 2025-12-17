@@ -1,0 +1,17 @@
+---
+import SignUpCard from "../components/SignUpCard.astro";
+import PageLayout from "../layout/PageLayout.astro";
+---
+
+<PageLayout>
+  <h1>TILMELD DIG HER</h1>
+  <section class="signup-box">
+    <SignUpCard text="Navn:" />
+    <SignUpCard text="Efternavn:" />
+    <SignUpCard text="Tlf+:" />
+    <SignUpCard text="Fødselsdag:" />
+    <SignUpCard text="Konto / RegNr:" />
+
+    <a href="https://dankort.dk/"> <button class="submit-knap">SUBMIT</button> </a>
+  </section>
+</PageLayout>

@@ -1,0 +1,111 @@
+---
+const { links = [] } = Astro.props;
+---
+
+<div class="burger">
+  <button class="burger__btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+    ☰
+  </button>
+
+  <nav id="mobileMenu" class="burger__panel" aria-hidden="true">
+    <button class="burger__close" type="button" aria-label="Luk menu">×</button>
+
+    <ul class="burger__list">
+      {links.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</div>
+
+<script>
+  const root = document.currentScript.closest(".burger");
+  const btn = root.querySelector(".burger__btn");
+  const panel = root.querySelector(".burger__panel");
+  const closeBtn = root.querySelector(".burger__close");
+
+  function openMenu() {
+    root.classList.add("is-open");
+    btn.setAttribute("aria-expanded", "true");
+    panel.setAttribute("aria-hidden", "false");
+  }
+
+  function closeMenu() {
+    root.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+    panel.setAttribute("aria-hidden", "true");
+  }
+
+  btn.addEventListener("click", () => {
+    root.classList.contains("is-open") ? closeMenu() : openMenu();
+  });
+
+  closeBtn.addEventListener("click", closeMenu);
+
+  // Luk når man klikker på et link
+  panel.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") closeMenu();
+  });
+
+  // Luk med ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+</script>
+
+<style>
+  /* Skjul burger på desktop */
+  @media (min-width: 800px) {
+    .burger { display: none; }
+  }
+
+  .burger__btn {
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* Panelet (menuen) */
+  .burger__panel {
+    position: fixed;
+    inset: 0;                 /* fylder hele skærmen */
+    background: white;
+    padding: 1.5rem;
+    display: none;            /* skjult som default */
+    z-index: 999;
+  }
+
+  .burger.is-open .burger__panel {
+    display: block;
+  }
+
+  .burger__close {
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    display: block;
+    margin-left: auto;
+  }
+
+  .burger__list {
+    list-style: none;
+    padding: 2rem 0 0;
+    margin: 0;
+    display: grid;
+    gap: 1.25rem;
+    text-align: right;        /* matcher “højre” look */
+  }
+
+  .burger__list a {
+    text-decoration: none;
+    color: #001b95;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+</style>

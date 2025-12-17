@@ -1,10 +1,14 @@
 ---
+import { navLinks } from "../data/navLinks";
 import Navigation from "./Navigation.astro";
+import BurgerMenu from "./BurgerMenu.astro";
+
 ---
 
 <header>
   <img src="imgs/logo.svg" alt="logo" />
-  <Navigation />
+  <Navigation links={navLinks} />
+  <BurgerMenu links={navLinks} />
 </header>
 
 
@@ -22,5 +26,20 @@ header img {
   width: auto;
   height: auto;
 }
+
+/* Desktop */
+@media (min-width: 800px) {
+  .burger {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 799px) {
+  nav.desktop {
+    display: none;
+  }
+}
+
 
 </style>

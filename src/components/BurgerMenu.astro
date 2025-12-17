@@ -69,6 +69,7 @@
     }
     .burger {
       display: block;
+      margin: 30px;
     }
     .burger.active .line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
@@ -93,7 +94,7 @@
       left: 0;
       width: 100%;
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-      z-index: 1;
+      z-index: 9999;
     }
 
     nav.active .menu li {
@@ -102,6 +103,7 @@
 
     nav.active .menu a {
       font-size: 24px;
+      list-style: none;
     }
   }
 
@@ -113,5 +115,9 @@
 
   .hide_mobile {
     display: none;
+  }
+
+  .li {
+    list-style: none;
   }
 </style>

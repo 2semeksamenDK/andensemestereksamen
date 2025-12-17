@@ -119,6 +119,16 @@ input {
     display: grid;
     justify-content: end;
   }
+   .test {
+  display: grid;
+  justify-items: end;
+  text-align: left;
+  
+}
+
+.test > * {
+  max-width: 400px;
+}
 
   .signup-box {
     background: #f7f3ef;

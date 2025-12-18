@@ -8,14 +8,27 @@
 /****** FONTE ******/
 h1 {
   text-align: center;
+  font-size: 3rem;
+  font-family: "Amaranth", sans-serif;
+  font-weight: 100;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
-h1,
-h2,
+h2 {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 100;
+  text-align: left;
+  font-size: 2rem;
+}
+
 h3 {
   font-family: "Amaranth", sans-serif;
   font-weight: 100;
+  text-align: left;
+  font-size: 1.5rem;
 }
+
 a {
   font-family: "Amaranth", sans-serif;
   font-weight: 100;
@@ -27,12 +40,6 @@ a {
 p {
   font-family: "Carme", sans-serifs;
   line-height: 30px;
-}
-
-.co2_grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
 }
 
 /******************/
@@ -93,6 +100,10 @@ ul.menu {
 }
 
 @media (min-width: 800px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
   .grid_1-1-1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -121,30 +132,21 @@ ul.menu {
     padding-top: 20px;
   }
 
-  .levelupoverskrift {
-    text-align: start;
-    margin: 20px;
-  }
-
   .bobbelgrid {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
   }
 
-  /* .test {
+  .højre {
     display: grid;
     justify-content: end;
-  }
-  .test {
-    display: grid;
-    justify-items: end;
-    text-align: left;
+    max-width: 400px;
   }
 
-  .test > * {
+  .højre > * {
     max-width: 400px;
-  } */
+  }
 
   .signup-box {
     display: grid;

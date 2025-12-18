@@ -3,7 +3,7 @@ const { title, text1, text2, text3 } = Astro.props;
 ---
 
 <article>
-    <h2>{title}</h2>
+    <h3>{title}</h3>
     <p>{text1}</p>
     <p>{text2}</p>
     <p>{text3}</p>
@@ -12,11 +12,9 @@ const { title, text1, text2, text3 } = Astro.props;
 
 <style>
 
-h2 {
+h3 {
     text-align: left;
-    margin-bottom: 1rem;
-
-
+    margin-bottom: 1.5rem;
 }
 
 p {
@@ -24,7 +22,7 @@ p {
 }
 
 article {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 

@@ -3,7 +3,7 @@ const { img, text, title } = Astro.props;
 ---
 
 <article class="grid-1_1">
-  <div>
+  <div class="ikoner">
     <img src={img} />
   </div>
   <div>
@@ -16,17 +16,23 @@ const { img, text, title } = Astro.props;
   .grid-1_1 {
     display: grid;
     grid-template-columns: 1fr 7fr;
+    justify-content: center;
+    padding-top: 20px;
   }
   img {
     width: 50%;
-   
+    align-items: center;
   }
-
 
   title {
-    font-weight: 20px;
+    font-weight: 30px;
+    align-items: center;
   }
 
-  
+  h3 {
+    text-align: center;
+  }
 
+  .ikoner {
+  }
 </style>

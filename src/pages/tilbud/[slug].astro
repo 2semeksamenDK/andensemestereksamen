@@ -28,25 +28,35 @@ export async function getStaticPaths() {
 const { data } = Astro.props as { data: tilbud };
 ---
 
-<PageLayout title={data.title}>
-  <section class="grid">
-    <img src={data.img1} alt={data.title} />
+
+<PageLayout >
+<section class="grid">
+  <img class="img1" src={data.img1} alt={data.title} />
+
+  <div class="block block--intro">
     <div>
-      <h2>{data.title}</h2>
+      <h2 class="title-main">{data.title}</h2>
+    </div>
+    <div>
       <p>{data.text1}</p>
       <p>{data.text2}</p>
     </div>
-    <div>
-      <h2>{data.subtitle}</h2>
-      <p>{data.text3}</p>
-      <p>{data.text4}</p>
-    </div>
-    <img src={data.img2} alt="" />
-  </section>
+  </div>
+
+  <div>
+    <h2>{data.subtitle}</h2>
+    <p>{data.text3}</p>
+    <p>{data.text4}</p>
+  </div>
+
+  <img src={data.img2} alt="" />
+</section>
 </PageLayout>
 
+
 <style>
-  img {
+
+img {
     border-radius: 20px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -70,18 +80,43 @@ p {
 }
 
 
-  .grid {
-    display: flex;
-    flex-direction: column;
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.block--intro {
+  display: contents;
+}
+
+.title-main {
+  grid-row: 1;
+}
+
+.img1 { 
+grid-row: 2; 
+}
+
+@media (min-width: 800px) {
+ 
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.block--intro {
+    display: block;
   }
 
-  @media (min-width: 800px) {
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
+.title-main {
+    grid-row: auto;
   }
 
+.img1 { 
+    grid-row: auto; 
+  }
 
+}
 </style>

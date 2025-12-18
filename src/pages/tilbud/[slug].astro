@@ -36,7 +36,7 @@ const { data } = Astro.props as { data: tilbud };
 <section class="grid">
   <img src={data.img1} alt={data.title} />
   <div>
-    <h1>{data.title}</h1>
+    <h2>{data.title}</h2>
     <p>{data.text1}</p>
     <p>{data.text2}</p>
   </div>
@@ -51,8 +51,6 @@ const { data } = Astro.props as { data: tilbud };
 </PageLayout>
 
 
-
-
 <style>
 img {
   border-radius: 20px;
@@ -62,12 +60,19 @@ img {
   height: 100%;
 }
 
-h1, h2, p {
+h1 {
   text-align: left;
+}
+
+h2 {
+  text-align: left;
+  font-size: 2rem;
+
 }
 
 p {
   margin-top: 1rem;
+    text-align: left;
 }
 
 @media (min-width: 800px) {
@@ -77,6 +82,15 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
+
+.hide_desktop {
+    display: none;
+  }
+
+  .hide_mobile {
+    display: block;
+  }
+
 }
 
 </style>

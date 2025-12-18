@@ -1,7 +1,8 @@
 ---
 import OverskriftCard from "../components/OverskriftCard.astro";
 import SignUpCard from "../components/SignUpCard.astro";
-import TextSignUpCard from "../components/TextSignUpCard.astro";
+import TekstboksCard from "../components/TekstboksCard.astro";
+import Button from "../components/Button.astro";
 import PageLayout from "../layout/PageLayout.astro";
 ---
 
@@ -9,16 +10,17 @@ import PageLayout from "../layout/PageLayout.astro";
   <OverskriftCard slot="OverskriftCard" title="BLIV EN DEL AF FÆLLESSKABET" />
 
   <section>
-    <TextSignUpCard title="VELKOMMEN TIL DANKORT - IMPACT" text="Tilmeld dig nemt med dit Dankort og begynd at optjene point for dine bæredygtige valg."/>
+    <TekstboksCard title="Velkommen til Dankort IMPACT" text1="Som eksisterende kunde hos Dankort, kan du nemt og gratis tilmelde dig med dit Dankort og begynde at optjene point for dine bæredygtige valg."/>
   </section>
 
   <section class="signup-box">
-    <SignUpCard text="Navn:" />
+    <SignUpCard text="Fornavn:" />
     <SignUpCard text="Efternavn:" />
-    <SignUpCard text="Tlf+:" />
+    <SignUpCard text="Telefonnummer:" />
+    <SignUpCard text="E-mail:" />
     <SignUpCard text="Fødselsdag:" />
-    <SignUpCard text="Konto / RegNr:" />
-
-    <a href="https://dankort.dk/"> <button class="submit-knap">SUBMIT</button> </a>
+    <SignUpCard text="Reg.nr. og kontonr.:" />
   </section>
+
+  <Button text="SEND" href="https://dankort.dk/" /> 
 </PageLayout>

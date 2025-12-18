@@ -6,6 +6,10 @@
 }
 
 /****** FONTE ******/
+h1 {
+  text-align: center;
+}
+
 h1,
 h2,
 h3 {
@@ -128,7 +132,7 @@ ul.menu {
     grid-template-rows: 1fr;
   }
 
-  .test {
+  /* .test {
     display: grid;
     justify-content: end;
   }
@@ -140,7 +144,7 @@ ul.menu {
 
   .test > * {
     max-width: 400px;
-  }
+  } */
 
   .signup-box {
     display: grid;

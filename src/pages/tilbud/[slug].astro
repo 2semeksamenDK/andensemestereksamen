@@ -3,91 +3,86 @@ import type { GetStaticPaths } from "astro";
 import PageLayout from "../../layout/PageLayout.astro";
 
 export async function getStaticPaths() {
+  const url = "https://zcoyexxpigipyagyxcfr.supabase.co/rest/v1/tilbud";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpjb3lleHhwaWdpcHlhZ3l4Y2ZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5MzcwMDUsImV4cCI6MjA4MTUxMzAwNX0.E7F0l3S6iLF5y0SDOwx6ZNnTdPxAG4DBZDIWIlbd2Dk";
 
-const url = "https://zcoyexxpigipyagyxcfr.supabase.co/rest/v1/tilbud";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpjb3lleHhwaWdpcHlhZ3l4Y2ZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5MzcwMDUsImV4cCI6MjA4MTUxMzAwNX0.E7F0l3S6iLF5y0SDOwx6ZNnTdPxAG4DBZDIWIlbd2Dk";
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
 
-const options = {
-  headers: {
-    apikey: key,
-  },
-};
+  const supaRequest = await fetch(url, options);
+  const supaData = await supaRequest.json();
 
-const supaRequest = await fetch(url, options);
-const supaData = await supaRequest.json();
+  console.log("supaData", supaData);
 
-console.log("supaData", supaData);
-
-    return supaData.map((data) => {
-        return {
-            params: { slug: data.slug},
-            props: { data },
-        };
-    });
+  return supaData.map((data) => {
+    return {
+      params: { slug: data.slug },
+      props: { data },
+    };
+  });
 }
 
 const { data } = Astro.props as { data: tilbud };
-
 ---
 
-
 <PageLayout title={data.title}>
-  
-<section class="grid">
-  <img src={data.img1} alt={data.title} />
-  <div>
-    <h1>{data.title}</h1>
-    <p>{data.text1}</p>
-    <p>{data.text2}</p>
-  </div>
-  <div>
-    <h2>{data.subtitle}</h2>
-    <p>{data.text3}</p>
-    <p>{data.text4}</p>
-  </div>
-  <img src={data.img2} alt="" />
-</section>
-
+  <section class="grid">
+    <img src={data.img1} alt={data.title} />
+    <div>
+      <h1>{data.title}</h1>
+      <p>{data.text1}</p>
+      <p>{data.text2}</p>
+    </div>
+    <div>
+      <h2>{data.subtitle}</h2>
+      <p>{data.text3}</p>
+      <p>{data.text4}</p>
+    </div>
+    <img src={data.img2} alt="" />
+  </section>
 </PageLayout>
 
-
-
-
 <style>
-img {
-  border-radius: 20px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
+  img {
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 
-h1, h2, p {
-  text-align: left;
-}
+  .h1 {
+    text-align: left;
+  }
+  h2,
+  p {
+    text-align: left;
+  }
 
-p {
-  margin-top: 1rem;
-}
+  p {
+    margin-top: 1rem;
+  }
 
-@media (min-width: 800px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-}
-
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
 </style>
-
-
-
 
 <!-- <PageLayout title={data.title}> -->
 
-  
-  <!-- <section>
+<!-- <section>
     <img src={data.img1} alt={data.title} />
   </section>
 

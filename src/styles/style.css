@@ -138,24 +138,11 @@ ul.menu {
     grid-template-rows: 1fr;
   }
 
-  .højre {
-    display: grid;
-    justify-content: end;
-    max-width: 400px;
-  }
-
-  .højre > * {
-    max-width: 400px;
-  }
-
   .signup-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background: #f7f3ef;
-    padding: 30px;
     max-width: 900px;
-    margin: 0 auto;
-    gap: 30px;
   }
 
   label {

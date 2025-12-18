@@ -10,12 +10,12 @@ const { title, subtitle, text } = Astro.props;
 
 <style>
   h1 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 0.85;
   }
 
   h2 {
-    font-size: 200px;
+    font-size: 90px;
     font-weight: 300px;
     line-height: 0.85;
   }
@@ -23,11 +23,35 @@ const { title, subtitle, text } = Astro.props;
   p {
     background: black;
     color: white;
-    padding: 20px 70px 30px;
+    padding: 10px 60px 20px;
     border-radius: 999px;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 900;
     display: inline-block;
     letter-spacing: 2px;
+  }
+
+  @media screen (min-width: 800px) {
+    h1 {
+      font-size: 30px;
+      line-height: 0.85;
+    }
+
+    h2 {
+      font-size: 300px;
+      font-weight: 300px;
+      line-height: 0.85;
+    }
+
+    p {
+      background: black;
+      color: white;
+      padding: 20px 70px 30px;
+      border-radius: 999px;
+      font-size: 1.5rem;
+      font-weight: 900;
+      display: inline-block;
+      letter-spacing: 2px;
+    }
   }
 </style>

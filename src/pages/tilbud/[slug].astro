@@ -78,6 +78,67 @@ const { data } = Astro.props as { data: tilbud };
       gap: 3rem;
     }
   }
+  
+<section class="grid">
+  <img src={data.img1} alt={data.title} />
+  <div>
+    <h2>{data.title}</h2>
+    <p>{data.text1}</p>
+    <p>{data.text2}</p>
+  </div>
+  <div>
+    <h2>{data.subtitle}</h2>
+    <p>{data.text3}</p>
+    <p>{data.text4}</p>
+  </div>
+  <img src={data.img2} alt="" />
+</section>
+
+</PageLayout>
+
+
+<style>
+img {
+  border-radius: 20px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+  font-size: 2rem;
+
+}
+
+p {
+  margin-top: 1rem;
+    text-align: left;
+}
+
+@media (min-width: 800px) {
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.hide_desktop {
+    display: none;
+  }
+
+  .hide_mobile {
+    display: block;
+  }
+
+}
+
 </style>
 
 <!-- <PageLayout title={data.title}> -->

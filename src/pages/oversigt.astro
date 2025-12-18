@@ -4,7 +4,7 @@ import OverskriftCard from "../components/OverskriftCard.astro";
 import PageLayout from "../layout/PageLayout.astro";
 
 
-const url = "https://zcoyexxpigipyagyxcfr.supabase.co/rest/v1/tilbud";
+const url = "https://zcoyexxpigipyagyxcfr.supabase.co/rest/v1/tilbud?select=*&order=id.asc";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpjb3lleHhwaWdpcHlhZ3l4Y2ZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5MzcwMDUsImV4cCI6MjA4MTUxMzAwNX0.E7F0l3S6iLF5y0SDOwx6ZNnTdPxAG4DBZDIWIlbd2Dk";
 
 const options = {
@@ -20,10 +20,12 @@ console.log("supaData", supaData);
 ---
 
 <PageLayout>
-  <OverskriftCard slot="OverskriftCard" title="FÆLLESSKAB OG BEVÆGELSE" />
+  <!-- <OverskriftCard slot="OverskriftCard" title="FÆLLESSKAB OG BEVÆGELSE" /> -->
 
-  <section class="grid_1-1-1">
-    <OversigtCard text="DANKORT IMPACT RUNNING CLUB" img="imgs/loeb1.webp" href="/" />
+<h1 slot="hero" >FÆLLESSKAB OG BEVÆGELSE</h1>
+
+  <!-- <section class="grid_1-1-1">
+    <OversigtCard text="DANKORT IMPACT RUNNING CLUB" img="imgs/loeb1.webp" href={`/tilbud/${tilbud.slug}`}></a> />
     <OversigtCard text="STRIKKEKLUB" img="imgs/strik1.webp" href="/" />
     <OversigtCard text="DANKORT IMPACT X BEAT RIDERS" img="imgs/beatriders2.webp" href="/" />
     <OversigtCard text="MORGENDYP" img="imgs/morgendyp1.webp" href="/" />
@@ -35,6 +37,18 @@ console.log("supaData", supaData);
     <OversigtCard text="TEGNE WORKSHOP" img="imgs/tegne1.webp" href="/" />
     <OversigtCard text="MEDITATION" img="imgs/meditation2.webp" href="/" />
     <OversigtCard text="KLATRING" img="imgs/klatre1.webp" href="/" />
-  </section>
+  </section> -->
+
+  <section class="grid_1-1-1">
+  {supaData.map((tilbud) => (
+    <OversigtCard
+      text={tilbud.title}
+      img={tilbud.img1}
+      href={`/tilbud/${tilbud.slug}`}
+    />
+  ))}
+</section>
 </PageLayout>
+
+
 

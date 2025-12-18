@@ -7,7 +7,8 @@
 
 /****** FONTE ******/
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Amaranth", sans-serif;
   font-weight: 100;
 }
@@ -142,11 +143,13 @@ ul.menu {
   }
 
   .signup-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background: #f7f3ef;
     padding: 30px;
     max-width: 450px;
     margin: 0 auto;
-    gap: 14px;
+    gap: 30px;
   }
 
   label {

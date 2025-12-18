@@ -46,6 +46,7 @@ article {
   overflow: hidden;
   display: block;
   aspect-ratio: 16 / 9;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .img-text img {
@@ -63,8 +64,13 @@ article {
   justify-content: center;
   color: white;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.5rem; 
   padding: 1rem;
+}
+
+
+.img-text:hover {
+  transform: translateY(-5px);
 }
 
 @media (min-width: 800px) {

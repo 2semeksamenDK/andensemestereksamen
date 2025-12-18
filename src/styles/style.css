@@ -147,7 +147,7 @@ ul.menu {
     grid-template-columns: 1fr 1fr;
     background: #f7f3ef;
     padding: 30px;
-    max-width: 450px;
+    max-width: 900px;
     margin: 0 auto;
     gap: 30px;
   }
@@ -160,7 +160,7 @@ ul.menu {
 
   input {
     flex: 1;
-    padding: 12px 16px;
+    padding: 12px 60px;
     border: 2px solid #001e96;
     border-radius: 30px;
     font-size: 1rem;

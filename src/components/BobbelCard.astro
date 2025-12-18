@@ -8,6 +8,14 @@ const { img } = Astro.props;
 
 <style>
   img {
-    width: 100%;
+    width: 80%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media screen (min-width: 800px) {
+    img {
+      width: 100%;
+    }
   }
 </style>
